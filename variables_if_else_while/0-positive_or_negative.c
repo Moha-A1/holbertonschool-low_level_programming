@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - point d'entre 
+ * main - Point d'entre 
  *
  * Return: toujours 0
  */
