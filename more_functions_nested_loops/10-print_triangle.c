@@ -17,7 +17,7 @@ return;
 }
 
 for (i = 1; i <= size; i++)
-    {
+{
     /* afficher les espaces */
 for (j = 0; j < size - i; j++)
 _putchar(' ');
