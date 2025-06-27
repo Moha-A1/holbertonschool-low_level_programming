@@ -1,5 +1,4 @@
-#include "main.h" /* Inclut le fichier d'en-tête principal. */
-
+#include "main.h"
 /**
  * reverse_array - Inverse le contenu d'un tableau d'entiers.
  * La fonction inverse les éléments du tableau 'a' sur place.
