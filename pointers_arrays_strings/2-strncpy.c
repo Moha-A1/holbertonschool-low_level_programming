@@ -40,7 +40,7 @@ char *_strncpy(char *dest, char *src, int n)
 	 *
 	 * Dans ce cas, les octets restants de 'dest' (de l'index 'i' jusqu'à 'n-1')
 	 * doivent être remplis avec des null bytes ('\0') pour correspondre au
-	 * comportement de la fonction standard strncpy.
+	 * comportement de la fonction standard .
 	 */
 	for (; i < n; i++)
 	{
