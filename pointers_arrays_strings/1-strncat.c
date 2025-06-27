@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * _strncat - Concatène deux chaînes de caractères, en utilisant au plus 'n' octets de 'src'.
+ * _strncat - Concatène deux chaînes de caractères, en utilisant au plus
+ * 'n' octets de 'src'.
  * Cette fonction ajoute la chaîne 'src' à la fin de la chaîne 'dest',
  * mais ne copie pas plus de 'n' octets de 'src'.
  * Le null byte final de 'dest' est écrasé, et un nouveau null byte
