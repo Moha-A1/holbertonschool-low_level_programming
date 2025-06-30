@@ -1,40 +1,47 @@
 #include "main.h"
 
 /**
- * _strchr - Localise un caractère dans une chaîne de caractères.
- * @s: La chaîne de caractères dans laquelle chercher.
- * @c: Le caractère à localiser.
+ * _strspn - Calcule la longueur du segment initial d'une chaîne.
+ * @s: La chaîne de caractères principale à analyser.
+ * @accept: La chaîne de caractères contenant l'ensemble des caractères
+ * autorisés.
  *
- * Return: Un pointeur vers la première occurrence du caractère c
- * dans la chaîne s,
- *
+ * Return: Le nombre d'octets (caractères) dans le segment initial de 's'
+ * qui sont exclusivement composés de caractères trouvés dans 'accept'.
  */
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
 
-	while (1)
+	unsigned int c = 0;
+	int f;
+	char *a;
+
+	while (*s != '\0')
 	{
-		/*
-		 * 1. Vérifie si le caractère actuel (pointé par *s) est celui que tu
-		 * cherches (c).
-		 */
-		if (*s == c)
+		f = 0;
+		a = accept;
+
+
+		while (*a != '\0')
 		{
-			/* Si oui ! Retourne l'adresse actuelle du pointeur 's'. */
-			return (s);
+			if (*s == *a)
+			{
+				f = 1;
+				break;
+			}
+			a++;
 		}
 
-		/* 2. Si le caractère actuel n'est PAS 'c', vérifie si c'est le '\0' */
-		if (*s == '\0')
+		if (f == 1)
 		{
-			/*
-			 * Si oui, tu as atteint la fin de la chaîne et 'c' n'a pas été trouvé.
-			 */
-
-			return ((char *)0); /* Retourne un pointeur nul. */
+			c++;
+			s++;
 		}
-
-		/* 3. Si ce n'est ni 'c' ni '\0', passe au caractère suivant. */
-		s++;
+		else
+		{
+			break;
+		}
 	}
+
+	return (c);
 }
