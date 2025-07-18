@@ -53,8 +53,7 @@ void print_all(const char * const format, ...)
 				sep_char = ", ";
 				break;
 			default:
-				i++;
-				continue;
+				break;
 		}
 		i++;
 	}
