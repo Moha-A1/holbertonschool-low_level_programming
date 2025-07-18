@@ -31,27 +31,31 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%s%c", sep_char, va_arg(args, int));
+				sep_char = ", ";
 				break;
 			case 'i':
 				printf("%s%d", sep_char, va_arg(args, int));
+				sep_char = ", ";
 				break;
 			case 'f':
 				printf("%s%f", sep_char, va_arg(args, double));
+				sep_char = ", ";
 				break;
 			case 's':
 				str = va_arg(args, char *);
 				if (str == NULL)
 				{
 					printf("%s(nil)", sep_char);
+					sep_char = ", ";
 					break;
 				}
 				printf("%s%s", sep_char, str);
+				sep_char = ", ";
 				break;
 			default:
 				i++;
 				continue;
 		}
-		sep_char = ", ";
 		i++;
 	}
 
