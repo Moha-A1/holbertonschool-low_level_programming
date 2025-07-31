@@ -11,7 +11,7 @@ int sum_dlistint(dlistint_t *head)
 	int sum = 0;
 	dlistint_t *current;
 
-	/* Traverse the list and add each element to the sum */
+
 	current = head;
 	while (current != NULL)
 	{
